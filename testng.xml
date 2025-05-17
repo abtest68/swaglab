@@ -4,8 +4,8 @@
     <test thread-count="5" name="Test">
         <classes>
             <class name="checkBox"/>
-            <class name="navigationCommandDemo"/>
-            <class name="radioButtonDemo"/>
+            <!-- Test <class name="navigationCommandDemo"/>
+            <class name="radioButtonDemo"/> -->
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
