@@ -11,9 +11,25 @@ public class checkBox {
     @Test(description = "CheckBoxDemo")
     public void check() {
 
-        WebDriver driver = new ChromeDriver();
+ WebDriverManager.chromedriver().setup();
+
+ ChromeOptions options = new ChromeOptions();
+
+ options.addArguments("--no-sandbox");
+
+ options.addArguments("--disable-dev-shm-usage");
+
+ options.addArguments("--headless");
+
+ driver = new ChromeDriver(options);
+
+ 
+
+ driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+
+        //WebDriver driver = new ChromeDriver();
         driver.get("https://demoqa.com/checkbox");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
 
         WebElement element = driver.findElement(By.cssSelector(".rct-checkbox svg"));
